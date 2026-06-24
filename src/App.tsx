@@ -1,22 +1,16 @@
 import "./App.css";
+import { Button } from "@/components/ui/Button";
 
 function App() {
+  const isActive = true;
   return (
     <>
-      <div className="text-xs text-red-500"> text-xs</div>
-      <div className="text-sm text-[rgb(100,10,200)]"> text-sm</div>
-      <div className="text-lg font-bold"> text-lg</div>
-      <div className="text-xl font-extrabold"> text-xl</div>
-      <div className="text-2xl font-black"> text-2xl</div>
-      <div className="text-[20px] text-red-500"> text-[20px]</div>
-
-      <div className="bg-amber-500"> bg-amber-500</div>
-
-      <div className="w-full bg-blue-500">box</div>
-
-      <div className="h-50 w-50 bg-red-400 px-5 py-5 pt-5 pr-5 pb-5 pl-5">
-        <div className="h-full w-full bg-blue-500"></div>
+      <Button>Click me</Button>
+      <div className={cn(isActive ? "text-muted" : "text-red-500")}>
+        This is muted text
       </div>
+      <div className="text-primary">This is primary text</div>
+      <div className="text-destructive">This is destructive text</div>
     </>
   );
 }
