@@ -1,21 +1,23 @@
 import { create } from "zustand";
 
 type Store = {
-  count: number;
-  increase: () => void;
-  decrease: () => void;
-};
+  counter:number;
+  increase : ()=> void;
+  decrease : ()=> void;
+}
 
-export const useCountStore = create<Store>((set, get) => ({
-  count: 0,
-  increase: () => {
-    set((store) => ({
-      count: store.count + 1,
-    }));
-  },
-  decrease: () => {
-    set((store) => ({
-      count: store.count - 1,
-    }));
-  },
-}));
+export default function Counter() {
+
+  const store<Store> = create((set,get)=>(
+    {
+      counter: 0,
+      increase:() => set((store)=> ({counter : store.counter + 1})),
+      decrease:()=> set((store)=>({counter:store.counter -1}))
+    }
+  ));
+  return (
+    <div>
+      
+    </div>
+  )
+}
