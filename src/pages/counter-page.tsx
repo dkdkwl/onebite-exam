@@ -1,7 +1,7 @@
 import { useCountStore } from "@/store/counte";
 
 export default function CounterPage() {
-  const { counter, increase, decrease } = useCountStore();
+  const { count, increase, decrease } = useCountStore();
   return (
     <div>
       <h1 className="text-2xl font-bold">counter-page</h1>
