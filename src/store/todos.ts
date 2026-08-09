@@ -1,10 +1,10 @@
 import { create } from "zustand";
 import { combine } from "zustand/middleware";
 import { immer } from "zustand/middleware/immer";
-import type { Todo } from "@/type";
+import type { Todo } from "../../type";
 
 const initialState: {
-  todos: Todos[];
+  todos: Todo[];
 } = {
   todos: [],
 };
